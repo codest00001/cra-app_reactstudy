@@ -2,14 +2,29 @@ import React, { useState } from 'react';
 
 function App() {
 
+console.log('render!')
 return (
   <>
-  <input type="text"/>
-  <button>save</button>
+  
   </>
 );
 }
   export default App;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
