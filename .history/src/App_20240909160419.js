@@ -1,72 +1,41 @@
 import React, { useState } from 'react'; 
 
 function App() {
-const [input, setInput] = useState('초기값');
+const [input, setInput] = useState('');
 
 const handleInputChange = (event) => {
+//input의 값이 변하면 이 함수가 항상 실행됨
+console.log(event.target.value)
 setInput(event.target.value)
+
 }
 
 const handleButtonClick = () => {
-  setInput('')
+  console.log('button clicked')
 }
 
-console.log('render!letterchanged')
+//리턴하고 괄호안에 html 리턴해주는데, 중괄호안에 함수명만 던져줌.
+//그 on 이벤트가 발생했을 때, onchange라든가 onclick을 실행했을 때 그 함수를 실행하라고 해줘야 하는 것.
+//이벤트 안에는 함수명만 넣어.
+//{handleInputChange()} 중괄호 안에 ()넣어버리면 함수를 실행해서 넣는 격이 되므로, 함수 이름만 넣을 것.
+//그 외에 <div>안에 넣을 때는 변수명만 넣는 게 아니라 함수를 넣어야 하는 것이고.
+
+//
+//함수나 오브젝트는 하나를 바꾸면 다 바뀐다.
+
 return (
-  //<>비어있는 꺾쇠의 이유 : 불필요한 엘리멘트가 끼어들지 않게 하도록.
-  //비어있는 것도 되도록 리액트에만 존재. 프래그먼트라고 부름.
-  //그리고 div는 리턴 안에 하나만 존재해야함.
-  <> 
+  <>
   <input onChange ={handleInputChange}
   type="text" />
   <button onClick = {handleButtonClick}
-  >clear</button>
-  <div>{input}</div>
+  >Save</button>
+
+  <div>{input()}</div>
   </>  
 );
 }
+
   export default App;
-
-
-
-
-// import React, { useState } from 'react'; 
-
-// function App() {
-// const [input, setInput] = useState('초기값');
-
-// const handleInputChange = (event) => {
-// //input의 값이 변하면 이 함수가 항상 실행됨
-// // console.log(event.target.value)
-// setInput(event.target.value)
-// }
-
-// const handleButtonClick = () => {
-//   console.log('button clicked')
-// }
-
-// //리턴하고 괄호안에 html 리턴해주는데, 중괄호안에 함수명만 던져줌.
-// //그 on 이벤트가 발생했을 때, onchange라든가 onclick을 실행했을 때 그 함수를 실행하라고 해줘야 하는 것.
-// //이벤트 안에는 함수명만 넣어.
-// //{handleInputChange()} 중괄호 안에 ()넣어버리면 함수를 실행해서 넣는 격이 되므로, 함수 이름만 넣을 것.
-
-// //그 외에 <div>안에 넣을 때는 변수명만 넣는 게 아니라 함수를 넣어야 하는 것이고.
-
-// //함수나 오브젝트는 하나를 바꾸면 다 바뀐다.
-
-// console.log('render!z')
-// return (
-//   <>
-//   <input onChange ={handleInputChange}
-//   type="text" />
-//   <button onClick = {handleButtonClick}
-//   >clear</button>
-//   <div>{input}</div>
-//   </>  
-// );
-// }
-
-//   export default App;
 
 
 

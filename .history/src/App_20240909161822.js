@@ -11,11 +11,10 @@ const handleButtonClick = () => {
   setInput('')
 }
 
-console.log('render!letterchanged')
+console.log('render!z')
 return (
   //<>비어있는 꺾쇠의 이유 : 불필요한 엘리멘트가 끼어들지 않게 하도록.
   //비어있는 것도 되도록 리액트에만 존재. 프래그먼트라고 부름.
-  //그리고 div는 리턴 안에 하나만 존재해야함.
   <> 
   <input onChange ={handleInputChange}
   type="text" />
@@ -25,6 +24,7 @@ return (
   </>  
 );
 }
+
   export default App;
 
 
