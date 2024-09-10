@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './Home'
-import About from './About'
+
+
 
 function App() {
  
+
   return (
   <>
   <Router>
@@ -14,6 +16,7 @@ function App() {
       <Route ></Route>
     </Routes>
   </Router>
+
 
   </>
   );
