@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from './pages/Home'
-import About from './pages/About'
-import TodoLists from './pages/TodoLists'
-import Nav from './components/Nav'
+import About from './About'
+import TodoLists from './TodoLists'
 
 function App() {
  
   return (
   <>
   <Router>
-  <Nav/>
+<Nav></Nav>
 
     <Routes>
       <Route path="/" element={<Home/>}></Route> 
